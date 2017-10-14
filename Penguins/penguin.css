@@ -1,0 +1,27 @@
+body {
+    background-color: #ccf5f5;
+}
+#gameholder {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+#title {
+    width: 600px;
+    height: 150px;
+    background-image:url('penguin_pngs/penguin_title.png');
+}
+
+#gameholder > div:nth-of-type(n + 3) {
+	width: 200px;
+    height: 200px;
+    float: left;
+    background-image:url('penguin_pngs/mound_1.png');
+
+}
+
+#gameholder > div:nth-of-type(n + 3):hover {
+	background-image:url('penguin_pngs/mound_1_hover.png');
+    cursor: pointer;
+}
