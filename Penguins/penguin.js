@@ -13,7 +13,7 @@ function pickRandomNumber(){
 }
 
 buttons.addEventListener("click", function(e){
-	for(var i = 0; i < e.path[1].children.length; i++){
+	for(var i = 0; i < e.path[1].children.length - 1; i++){
 		e.path[1].children[i].disabled = true;
 	}
 }
@@ -48,11 +48,11 @@ function computerTurn(clickeds, yetiNum){
 	}
 	if(computerChoice === yetiNum){
 		mounds[computerChoice].style.backgroundImage = "url('penguin_pngs/yeti.png')";
-		mounds[computerChoice].style.backgroundColor = "red";
+		mounds[computerChoice].style.boxShadow = "1px 1px 25px 5px red";
 		controlMoundsClick("disable");
 	}else{
 		mounds[computerChoice].style.backgroundImage = "url('penguin_pngs/penguin_1.png')";
-		mounds[computerChoice].style.backgroundColor = "red";
+		mounds[computerChoice].style.boxShadow = "1px 1px 25px 5px red";
 		mounds[computerChoice].style.pointerEvents = "none";
 	}
 	clickedMounds.push(computerChoice);
@@ -81,7 +81,7 @@ function humanMode(e){
 	clickedMounds.push(targetIndex);
 	moundClickCount++;
 	if(moundClickCount % 2 === 0){
-		e.target.style.backgroundColor = "red";
+		e.target.style.boxShadow = "1px 1px 25px 5px red";
 	}
 	if(targetIndex !== -1 && targetIndex !== num){
 		e.target.style.backgroundImage = "url('penguin_pngs/penguin_1.png')";

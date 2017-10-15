@@ -14,10 +14,14 @@ body {
 }
 
 #gameholder > div:nth-of-type(n + 3) {
-	width: 200px;
-    height: 200px;
+	width: 150px;
+    height: 150px;
+    margin: 25px;
     float: left;
     background-image:url('penguin_pngs/mound_1.png');
+    background-size: 100px 150px;
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
 
@@ -25,3 +29,4 @@ body {
 	background-image:url('penguin_pngs/mound_1_hover.png');
     cursor: pointer;
 }
+
