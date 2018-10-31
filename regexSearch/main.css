@@ -1,0 +1,38 @@
+.main-flex-container {
+  display: flex;
+}
+.main-grid-container {
+  width: 60%;
+  margin: 20px auto;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template-areas: "input-string input-string input-string";
+  align-items: center;
+  justify-items: center;
+}
+.input-string {
+  grid-area: input-string;
+}
+.regex-string {
+  text-align: center;
+}
+.result {
+  grid-area: 3/1 / 4/4;
+}
+.text-area-label {
+  display: inline-block;
+  width: 20%;
+  text-align: left;
+}
+textarea {
+  vertical-align: top;
+  width: 65%;
+}
+button {
+  display: block;
+  margin: 5px auto;
+  border: none;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
