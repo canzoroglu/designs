@@ -5,10 +5,11 @@
   width: 60%;
   margin: 20px auto;
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
   grid-template-areas: "input-string input-string input-string";
   align-items: center;
   justify-items: center;
+  grid-gap: 10px;
 }
 .input-string {
   grid-area: input-string;
@@ -16,8 +17,12 @@
 .regex-string {
   text-align: center;
 }
+.checkboxes {
+  grid-area: 3/2 / 4/3;
+  align-self: start;
+}
 .result {
-  grid-area: 3/1 / 4/4;
+  grid-area: 4/1 / 5/4;
 }
 .text-area-label {
   display: inline-block;
