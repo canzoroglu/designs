@@ -12,11 +12,12 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 0; 
+  margin: 0;
 }
 
 header, nav, footer, section, article, div {
   box-sizing: border-box;
+  width: 100%;
 }
 
 ul {
@@ -24,12 +25,15 @@ ul {
   padding: 0;
   margin: 0;
 }
-
+section.content {
+  display: flex;
+  flex-direction: column;
+}
 
 /*
  *
  * Common
- * 
+ *
  */
 
 .news__more {
@@ -53,7 +57,7 @@ ul {
 }
 
 .header__inner {
-  width: 800px;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -81,7 +85,7 @@ ul {
  */
 
 .nav {
-  width: 800px;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -121,9 +125,9 @@ ul {
 
 main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-  width: 800px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 /*
@@ -141,7 +145,7 @@ main {
 
 .hero {
   float: left;
-  width: 480px;
+
   position: relative;
   background-image: url("./images/dog.jpg");
   background-size: cover;
@@ -169,7 +173,7 @@ main {
 
 .top-news {
   float: right;
-  width: 320px;
+
   height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
@@ -214,7 +218,7 @@ main {
  */
 
 .scores {
-  width: 480px;
+
   float: left;
   padding-top: 1em;
 }
@@ -226,7 +230,7 @@ main {
 
 .scores__table th,
 .scores__table td {
-  padding: 1em; 
+  padding: 1em;
 }
 
 .scores__table th {
@@ -264,7 +268,7 @@ main {
 
 .weather {
   float: right;
-  width: 320px;
+
   padding: 1em;
 }
 
