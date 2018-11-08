@@ -1,3 +1,18 @@
+@media screen and (max-width: 599px){
+  #drawer {
+    width: 300px;
+    transform: translate(-450px,0);
+  }
+  h1.header__title {
+    font-size: 3em;
+  }
+  #ham {
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    font-size: 2em;
+  }
+}
 @media screen and (min-width: 600px){
   main section.content {
     flex-direction: row;
@@ -64,7 +79,13 @@ header, nav, footer, section, article, div {
   box-sizing: border-box;
   width: 100%;
 }
-
+.ham {
+  position: absolute;
+  top: -20px;
+}
+.open {
+  transform: translate(0, 0) !important;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -130,7 +151,6 @@ section.content {
  */
 
 .nav {
-
   margin-left: auto;
   margin-right: auto;
 }
