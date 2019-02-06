@@ -4,8 +4,7 @@ let base2 = document.querySelector("#base2");
 let result = document.querySelector("#result");
 let button = document.querySelector("button");
 function baseConvert(num, base1, base2){
-  let strNum = String(num);
-  let numArr = strNum.split("");
+  let numArr = num.split("");
   let numBase2 = [];
   let numBaseTen = numArr.map((item, index, arr) => {
     let len = arr.length - 1;
@@ -23,6 +22,6 @@ function baseConvert(num, base1, base2){
   return numBase2.reverse().join("");
 }
 button.addEventListener("click", () => {
-  let res = baseConvert(+number.value, +base1.value, +base2.value);
+  let res = baseConvert(number.value, +base1.value, +base2.value);
   result.value = res;
 });
