@@ -16,12 +16,19 @@
       font-family: 'Artifika', serif;
     }
     form > div.row {
-      padding-left: 140px;
-      padding-right: 140px;
       font-size: 1.3rem;
+      padding-left: 18vw;
+      color: #a810ef;
+    }
+    form > div.row > div {
+      display: flex;
+      align-items: baseline;
+    }
+    #prev-next-buttons {
+      padding-right: 16vw;
     }
     #prev-next-buttons button {
-      margin: 10px;
+      margin: 10px auto;
     }
     #scoreboard {
       border: 2px solid #2df40e;
@@ -29,17 +36,8 @@
       font-size: 1.6rem;
       width: 40vw;
     }
-    .custom-control-label:before {
-      top: 10px;
-    }
-    .custom-control-label {
-      color: #a810ef;
-    }
-    .custom-control-input:checked~.custom-control-label::before {
-      background-color: orange;
-    }
-    .custom-radio .custom-control-input:checked~.custom-control-label:after {
-      background-image: none;
+    label {
+      margin-left: 10px;
     }
     @media only screen and (max-width: 768px) {
         #collapsibleNavbar ul.navbar-nav {
@@ -48,15 +46,6 @@
         ul.navbar-nav > li.nav-item {
           margin-right: 15px;
         }
-        form > div.row {
-          padding-left: 45px;
-          padding-right: 45px;
-        }
-        #prev-next-buttons button {
-          margin: 0 5px;
-          padding-left: 10px;
-          padding-right: 10px;
-        }
         #scoreboard {
           border: 2px solid #2df40e;
           padding-bottom: 1.2rem;
@@ -64,10 +53,7 @@
           width: 50vw;
         }
         form > div.row {
-          font-size: 1.2rem;
-        }
-        .custom-control-label:before {
-          top: 7px;
+          font-size: 1rem;
         }
       }
       }
@@ -115,29 +101,29 @@
         <form class="text-center" action="" method="">
           <div class="row mt-3">
 
-            <div class="col-sm-6 custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="option1" name="example1">
-              <label class="custom-control-label" for="option1">Opn 1</label>
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option1" name="example1">
+              <label class="" for="option1">Opn 1</label>
             </div>
 
-            <div class="col-sm-6 custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="option2" name="example1">
-              <label class="custom-control-label" for="option2">Option 2</label>
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option2" name="example1">
+              <label class="" for="option2">Option 2</label>
             </div>
 
-            <div class="col-sm-6 custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="option3" name="example1">
-              <label class="custom-control-label" for="option3">OptionOption 3</label>
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option3" name="example1">
+              <label class="" for="option3">OptionOption 3</label>
             </div>
 
-            <div class="col-sm-6 custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="option4" name="example1">
-              <label class="custom-control-label" for="option4">Option 4sadasd</label>
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option4" name="example1">
+              <label class="" for="option4">Option 4sadasd</label>
             </div>
 
-            <div class="col-sm-6 custom-control custom-radio">
-              <input type="radio" class="custom-control-input" id="option5" name="example1">
-              <label class="custom-control-label" for="option5">Opn 5</label>
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option5" name="example1">
+              <label class="" for="option5">Opn 5</label>
             </div>
 
             <div id="prev-next-buttons" class="col-12 mt-2">
