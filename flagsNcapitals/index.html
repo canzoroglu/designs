@@ -6,16 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Artifika|Asap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Hello, world!</title>
     <style media="screen">
+    body {
+      background-color: #adf2ff;
+      font-family: 'Artifika', serif;
+    }
     form > div.row {
-      padding-left: 100px;
-      padding-right: 100px;
+      padding-left: 140px;
+      padding-right: 140px;
+      font-size: 1.3rem;
     }
     #prev-next-buttons button {
       margin: 10px;
+    }
+    #scoreboard {
+      border: 2px solid #2df40e;
+      padding-bottom: 2rem;
+      font-size: 1.6rem;
+      width: 40vw;
+    }
+    .custom-control-label:before {
+      top: 10px;
+    }
+    .custom-control-label {
+      color: #a810ef;
+    }
+    .custom-control-input:checked~.custom-control-label::before {
+      background-color: orange;
+    }
+    .custom-radio .custom-control-input:checked~.custom-control-label:after {
+      background-image: none;
     }
     @media only screen and (max-width: 768px) {
         #collapsibleNavbar ul.navbar-nav {
@@ -33,6 +57,19 @@
           padding-left: 10px;
           padding-right: 10px;
         }
+        #scoreboard {
+          border: 2px solid #2df40e;
+          padding-bottom: 1.2rem;
+          font-size: 1.2rem;
+          width: 50vw;
+        }
+        form > div.row {
+          font-size: 1.2rem;
+        }
+        .custom-control-label:before {
+          top: 7px;
+        }
+      }
       }
     </style>
   </head>
@@ -61,15 +98,26 @@
         </ul>
       </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid pb-2">
+      <div id="scoreboard" class="container text-center bg-light mt-4">
+        <h3 id="time" class="text-info">TIME</h3>
+        <div class="row">
+          <div id="correct" class="col-6 text-success">
+            True:
+          </div>
+          <div id="wrong" class="col-6 text-danger">
+            False:
+          </div>
+        </div>
+      </div>
       <div class="container">
-        <img src="./countries/svg/tr.svg" class="w-50 d-block mx-auto mt-5" alt="turkey">
+        <img src="./countries/svg/tr.svg" class="w-50 d-block mx-auto mt-3" alt="turkey">
         <form class="text-center" action="" method="">
-          <div class="row mt-md-5 mt-3">
+          <div class="row mt-3">
 
             <div class="col-sm-6 custom-control custom-radio">
               <input type="radio" class="custom-control-input" id="option1" name="example1">
-              <label class="custom-control-label" for="option1">Option 1</label>
+              <label class="custom-control-label" for="option1">Opn 1</label>
             </div>
 
             <div class="col-sm-6 custom-control custom-radio">
@@ -79,22 +127,21 @@
 
             <div class="col-sm-6 custom-control custom-radio">
               <input type="radio" class="custom-control-input" id="option3" name="example1">
-              <label class="custom-control-label" for="option3">Option 3</label>
+              <label class="custom-control-label" for="option3">OptionOption 3</label>
             </div>
 
             <div class="col-sm-6 custom-control custom-radio">
               <input type="radio" class="custom-control-input" id="option4" name="example1">
-              <label class="custom-control-label" for="option4">Option 4</label>
+              <label class="custom-control-label" for="option4">Option 4sadasd</label>
             </div>
 
             <div class="col-sm-6 custom-control custom-radio">
               <input type="radio" class="custom-control-input" id="option5" name="example1">
-              <label class="custom-control-label" for="option5">Option 5</label>
+              <label class="custom-control-label" for="option5">Opn 5</label>
             </div>
 
-            <div id="prev-next-buttons" class="col-12 mt-md-5 mt-3">
-              <button type="button" class="btn btn-outline-primary" name="button">Previous</button>
-              <button type="button" class="btn btn-outline-primary" name="button">Next</button>
+            <div id="prev-next-buttons" class="col-12 mt-2">
+              <button type="button" class="btn btn-outline-primary btn-lg" name="button">Next</button>
             </div>
           </div>
         </form>
