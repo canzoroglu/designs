@@ -35,6 +35,7 @@
       padding-bottom: 2rem;
       font-size: 1.6rem;
       width: 40vw;
+      z-index: 3;
     }
     label {
       margin-left: 10px;
@@ -84,9 +85,16 @@
         </ul>
       </div>
     </nav>
-    <div class="container-fluid pb-2">
+    <div id="start-div" class="container mt-3">
+      <div class="jumbotron text-center">
+        <h1>Welcome to FlagsNCapitals</h1>
+        <a href="#flags-div" class="btn btn-primary btn-lg m-2" name="flags">Start Flags Game</a>
+        <a href="#flags-div" class="btn btn-primary btn-lg m-2" name="capitals">Start Capitals Game</a>
+      </div>
+    </div>
+    <div id="flags-div" class="container-fluid pb-2 d-none">
       <div id="scoreboard" class="container text-center bg-light mt-4">
-        <h3 id="time" class="text-info">TIME</h3>
+        <h3 id="time" class="text-info">0:10</h3>
         <div class="row">
           <div id="correct" class="col-6 text-success">
             True:
@@ -97,6 +105,11 @@
         </div>
       </div>
       <div class="container">
+        <div id="results" class="jumbotron text-center d-none">
+          <h1>Here is the results</h1>
+        </div>
+      </div>
+      <div id="game-area" class="container">
         <img src="./countries/svg/tr.svg" class="w-50 d-block mx-auto mt-3" alt="turkey">
         <form class="text-center" action="" method="">
           <div class="row mt-3">
