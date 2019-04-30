@@ -1,6 +1,7 @@
 let startDiv = document.querySelector("#start-div"); //start view
 let flagsDiv = document.querySelector("#flags-div"); //flag game view
 let gameArea = document.querySelector("#game-area");
+let radioButtons = document.querySelectorAll("input[name='option']");
 let results = document.querySelector("#results");
 let nextButton = document.querySelector("#next");
 let timer = document.querySelector("#time");
@@ -49,27 +50,21 @@ function createOptions(optionNumber = 5) {
   return shuffleArr(flagOptions);
 }
 
-// for (let i = 0; i < 5; i++) {
-//   let examples = [];
-//   let src = "";
-//   let options = createOptions();
-//   src = flagQuestions[flagQuestions.length - 1].toLowerCase() + ".svg";
-//   examples.push({flag: src, options});
-//   console.log(examples);
-// }
 
 nextButton.addEventListener("click", () => {
-
-  //Next butonuna tıklanınca seçenekler ve bayraklar değişssin
-  //radio tipindeki inputları seç, bunların value ve labellarını yeni
-  //oluşturulan seçenekler ile değiştir
-
+  let options = createOptions();
+  let newFlag = "./countries/svg/" + flagQuestions[flagQuestions.length - 1].toLowerCase() + ".svg";
+  gameArea.firstElementChild.src = newFlag;
+  radioButtons.forEach((radioButton, index) => {
+    radioButton.value = options[index];
+    radioButton.nextElementSibling.textContent = options[index];
+  });
 });
 
 flagsButton.addEventListener("click", () => {
   startDiv.classList.add("d-none");
   flagsDiv.classList.remove("d-none");
-  let minute = 0, second = 9;
+  let minute = 0, second = 50;
   let timerID = setInterval(() => {
     if (second < 10) {
       timer.textContent = `${minute}:0${second}`;
