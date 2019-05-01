@@ -1,6 +1,7 @@
 let startDiv = document.querySelector("#start-div"); //start view
 let flagsDiv = document.querySelector("#flags-div"); //flag game view
 let gameArea = document.querySelector("#game-area");
+let flagImage = document.querySelector("#flag-img");
 let correct = document.querySelector("#correct");
 let correctResults = document.querySelector("#correct-results");
 let wrongResults = document.querySelector("#wrong-results");
@@ -69,20 +70,35 @@ function createGameArea() {
 }
 
 function showResults() {
-  let ulWrong = document.createElement("ul");
-  let ulRight = document.createElement("ul");
   wrongAns.forEach(answers => {
-    let li = document.createElement("li");
-    li.textContent = `Your answer was ${answers.checked}, actual answer was ${answers.actual}`;
-    ulWrong.appendChild(li);
+    let tr = document.createElement("tr");
+    let tdImg = document.createElement("td");
+    let tdWrongAns = document.createElement("td");
+    let tdRightAns = document.createElement("td");
+    let img = document.createElement("img");
+    img.src = answers.image;
+    img.classList.add("result-image");
+    tdImg.appendChild(img);
+    tr.appendChild(tdImg);
+    tdRightAns.textContent = `${answers.actual}`;
+    tr.appendChild(tdRightAns);
+    tdWrongAns.textContent = `${answers.checked}`;
+    tr.appendChild(tdWrongAns);
+    wrongResults.tBodies[0].appendChild(tr);
   });
   rightAns.forEach(answer => {
-    let li = document.createElement("li");
-    li.textContent = `Your answer was ${answer}`;
-    ulRight.appendChild(li);
+    let tr = document.createElement("tr");
+    let tdImg = document.createElement("td");
+    let tdRightAns = document.createElement("td");
+    let img = document.createElement("img");
+    img.src = answer.image;
+    img.classList.add("result-image");
+    tdImg.appendChild(img);
+    tr.appendChild(tdImg);
+    tdRightAns.textContent = `${answer.checked}`;
+    tr.appendChild(tdRightAns);
+    correctResults.tBodies[0].appendChild(tr);
   });
-  wrongResults.appendChild(ulWrong);
-  correctResults.appendChild(ulRight);
 }
 
 radioButtons.forEach(button => {
@@ -97,11 +113,11 @@ nextButton.addEventListener("click", () => {
   let answer = countries[flagQuestions[flagQuestions.length - 1]];
   if (checked == answer) {
     trueScore++;
-    rightAns.push(checked);
+    rightAns.push({image: flagImage.src, checked});
     correct.textContent = `True: ${trueScore}`;
   } else {
     wrongScore++;
-    wrongAns.push({actual: answer, checked});
+    wrongAns.push({image: flagImage.src, actual: answer, checked});
     wrong.textContent = `False: ${wrongScore}`;
   }
 
@@ -113,7 +129,7 @@ flagsButton.addEventListener("click", () => {
   createGameArea();
   startDiv.classList.add("d-none");
   flagsDiv.classList.remove("d-none");
-  let minute = 0, second = 50;
+  let minute = 0, second = 59;
   let timerID = setInterval(() => {
     if (second < 10) {
       timer.textContent = `${minute}:0${second}`;
