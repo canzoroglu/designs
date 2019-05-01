@@ -2,6 +2,8 @@ let startDiv = document.querySelector("#start-div"); //start view
 let flagsDiv = document.querySelector("#flags-div"); //flag game view
 let gameArea = document.querySelector("#game-area");
 let correct = document.querySelector("#correct");
+let correctResults = document.querySelector("#correct-results");
+let wrongResults = document.querySelector("#wrong-results");
 let wrong = document.querySelector("#wrong");
 let radioButtons = document.querySelectorAll("input[name='option']");
 let results = document.querySelector("#results");
@@ -66,6 +68,23 @@ function createGameArea() {
   });
 }
 
+function showResults() {
+  let ulWrong = document.createElement("ul");
+  let ulRight = document.createElement("ul");
+  wrongAns.forEach(answers => {
+    let li = document.createElement("li");
+    li.textContent = `Your answer was ${answers.checked}, actual answer was ${answers.actual}`;
+    ulWrong.appendChild(li);
+  });
+  rightAns.forEach(answer => {
+    let li = document.createElement("li");
+    li.textContent = `Your answer was ${answer}`;
+    ulRight.appendChild(li);
+  });
+  wrongResults.appendChild(ulWrong);
+  correctResults.appendChild(ulRight);
+}
+
 radioButtons.forEach(button => {
   button.addEventListener("click", () => {
       checked = button.value;
@@ -103,6 +122,7 @@ flagsButton.addEventListener("click", () => {
       timer.textContent = `${minute}:${second}`;
     }
     if (second === 0 && minute === 0) {
+      showResults();
       gameArea.classList.add("d-none");
       results.classList.remove("d-none");
       clearInterval(timerID);
