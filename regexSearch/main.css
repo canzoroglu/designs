@@ -33,6 +33,7 @@
   }
   fieldset.checkboxes {
     grid-area: flags;
+    margin-top: 1.5rem;
   }
   div.result {
     grid-area: result;
@@ -41,7 +42,9 @@
     align-items: center;
   }
 }
-
+body {
+  background-color: #eaedf2;
+}
 .main-flex-container {
   display: flex;
   width: 100%;
@@ -63,8 +66,15 @@
   text-align: center;
   max-width: 100%;
 }
+.regex-string label {
+  display: block;
+  margin-bottom: .75rem;
+}
 input.regexes {
   max-width: 100%;
+}
+#replace-text-div {
+  margin-top: 1.2rem;
 }
 .checkboxes {
   grid-area: 3/2 / 4/3;
