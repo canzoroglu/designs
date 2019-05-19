@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Artifika|Asap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Flags And Capitals</title>
     <style media="screen">
     body {
       background-color: #adf2ff;
@@ -74,7 +74,7 @@
   <body>
     <nav class="navbar navbar-expand-md bg-light navbar-light">
       <!-- Brand -->
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="/">Home</a>
 
       <!-- Toggler/collapsibe Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -82,27 +82,31 @@
       </button>
 
       <!-- Navbar links -->
-      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+      <!-- <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item mr-md-5">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link1</a>
           </li>
           <li class="nav-item mr-md-5">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link2</a>
           </li>
           <li class="nav-item mr-md-5">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link3</a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </nav>
+    <!-- Starting Page -->
     <div id="start-div" class="container mt-3">
       <div class="jumbotron text-center">
         <h1>Welcome to FlagsNCapitals</h1>
         <a href="#flags-div" class="btn btn-primary btn-lg m-2" name="flags">Start Flags Game</a>
-        <a href="#flags-div" class="btn btn-primary btn-lg m-2" name="capitals">Start Capitals Game</a>
+        <a href="#capitals-div" class="btn btn-primary btn-lg m-2" name="capitals">Start Capitals Game</a>
       </div>
     </div>
+    <!-- End of Starting Page -->
+
+    <!-- Flags Game Part -->
     <div id="flags-div" class="container-fluid pb-2 d-none">
       <div id="scoreboard" class="container text-center bg-light mt-4">
         <h3 id="time" class="text-info">1:00</h3>
@@ -143,14 +147,6 @@
             </thead>
             <tbody></tbody>
           </table>
-          <!-- <div class="row">
-            <div id="correct-results" class="col-12 col-md-6">
-              <h3>Correct Answers</h3>
-            </div>
-            <div id="wrong-results" class="col-12 col-md-6">
-              <h3>Wrong Answers</h3>
-            </div>
-          </div> -->
         </div>
       </div>
       <div id="game-area" class="container">
@@ -160,27 +156,27 @@
 
             <div class="col-sm-6">
               <input type="radio" class="" id="option1" name="option" value="">
-              <label class="" for="option1">Opn 1</label>
+              <label class="" for="option1"></label>
             </div>
 
             <div class="col-sm-6">
               <input type="radio" class="" id="option2" name="option" value="">
-              <label class="" for="option2">Option 2</label>
+              <label class="" for="option2"></label>
             </div>
 
             <div class="col-sm-6">
               <input type="radio" class="" id="option3" name="option" value="">
-              <label class="" for="option3">OptionOption 3</label>
+              <label class="" for="option3"></label>
             </div>
 
             <div class="col-sm-6">
               <input type="radio" class="" id="option4" name="option" value="">
-              <label class="" for="option4">Option 4sadasd</label>
+              <label class="" for="option4"></label>
             </div>
 
             <div class="col-sm-6">
               <input type="radio" class="" id="option5" name="option" value="">
-              <label class="" for="option5">Opn 5</label>
+              <label class="" for="option5"></label>
             </div>
 
             <div id="prev-next-buttons" class="col-12 mt-2">
@@ -190,12 +186,97 @@
         </form>
       </div>
     </div>
+    <!-- End of Flags Game Part -->
+
+    <!-- Capitals Game Part -->
+    <div id="capitals-div" class="container-fluid pb-2 d-none">
+      <div id="scoreboard-caps" class="container text-center bg-light mt-4">
+        <h3 id="time-caps" class="text-info">1:00</h3>
+        <div class="row">
+          <div id="correct-caps" class="col-6 text-success">
+            True:
+          </div>
+          <div id="wrong-caps" class="col-6 text-danger">
+            False:
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="results-caps" class="jumbotron text-center d-none">
+          <h2>Here is the results</h2>
+          <table id="correct-results-caps" class="table table-hover">
+            <thead>
+              <tr>
+                <th colspan="3">Correct Answers</th>
+              </tr>
+              <tr>
+                <th>Country</th>
+                <th>Capital City</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <table id="wrong-results-caps" class="table table-hover">
+            <thead>
+              <tr>
+                <th colspan="3">Wrong Answers</th>
+              </tr>
+              <tr>
+                <th>Country</th>
+                <th>Right Answer</th>
+                <th>Your Answer</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="game-area-caps" class="container">
+        <h3 id="country-name" class="text-center"></h3>
+        <form class="text-center" action="" method="">
+          <div class="row mt-3">
+
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option1-caps" name="option" value="">
+              <label class="" for="option1-caps"></label>
+            </div>
+
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option2-caps" name="option" value="">
+              <label class="" for="option2-caps"></label>
+            </div>
+
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option3-caps" name="option" value="">
+              <label class="" for="option3-caps"></label>
+            </div>
+
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option4-caps" name="option" value="">
+              <label class="" for="option4-caps"></label>
+            </div>
+
+            <div class="col-sm-6">
+              <input type="radio" class="" id="option5-caps" name="option" value="">
+              <label class="" for="option5-caps"></label>
+            </div>
+
+            <div id="prev-next-buttons" class="col-12 mt-2">
+              <button id="next-caps" type="button" class="btn btn-outline-primary btn-lg" name="button">Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End of Capitals Game Part -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="countries/countries.js"></script>
+    <script src="countries/capitals.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
