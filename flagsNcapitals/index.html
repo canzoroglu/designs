@@ -8,93 +8,29 @@
     <!-- Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css?family=Artifika|Asap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="main.css">
     <title>Flags And Capitals</title>
-    <style media="screen">
-    body {
-      background-color: #adf2ff;
-      font-family: 'Artifika', serif;
-    }
-    #flags-div {
-      height: 100vh;
-    }
-    #game-area img {
-      width: 40vw;
-      height: 25vh;
-    }
-    form > div.row {
-      font-size: 1.3rem;
-      padding-left: 18vw;
-      color: #a810ef;
-    }
-    form > div.row > div {
-      display: flex;
-      align-items: baseline;
-    }
-    #prev-next-buttons {
-      padding-right: 16vw;
-    }
-    #prev-next-buttons button {
-      margin: 10px auto;
-    }
-    #scoreboard {
-      border: 2px solid #2df40e;
-      padding-bottom: 2rem;
-      font-size: 1.6rem;
-      width: 40vw;
-      z-index: 3;
-    }
-    label {
-      margin-left: 10px;
-    }
-    .result-image {
-      width: 20%;
-      height: auto;
-    }
-    @media only screen and (max-width: 768px) {
-        #collapsibleNavbar ul.navbar-nav {
-          align-items: flex-end;
-        }
-        ul.navbar-nav > li.nav-item {
-          margin-right: 15px;
-        }
-        #scoreboard {
-          border: 2px solid #2df40e;
-          padding-bottom: 1.2rem;
-          font-size: 1.2rem;
-          width: 50vw;
-        }
-        form > div.row {
-          font-size: 1rem;
-        }
-      }
-      }
-    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-md bg-light navbar-light">
       <!-- Brand -->
-      <a class="navbar-brand" href="/">Home</a>
+      <a class="navbar-brand" href="index.html">Home</a>
 
       <!-- Toggler/collapsibe Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <!-- Navbar links -->
-      <!-- <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
-          <li class="nav-item mr-md-5">
-            <a class="nav-link" href="#">Link1</a>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Flags Game</a>
           </li>
-          <li class="nav-item mr-md-5">
-            <a class="nav-link" href="#">Link2</a>
-          </li>
-          <li class="nav-item mr-md-5">
-            <a class="nav-link" href="#">Link3</a>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Capitals Game</a>
           </li>
         </ul>
-      </div> -->
+      </div>
     </nav>
     <!-- Starting Page -->
     <div id="start-div" class="container mt-3">
@@ -232,7 +168,7 @@
         </div>
       </div>
       <div id="game-area-caps" class="container">
-        <h3 id="country-name" class="text-center"></h3>
+        <h3 id="country-name" class="text-center my-4"></h3>
         <form class="text-center" action="" method="">
           <div class="row mt-3">
 

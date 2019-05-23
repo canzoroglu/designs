@@ -1,0 +1,60 @@
+body {
+  background-color: #adf2ff;
+  font-family: 'Artifika', serif;
+}
+#flags-div {
+  height: 100vh;
+}
+#capitals-div {
+  padding-top: 2rem;
+}
+#game-area img {
+  width: 40vw;
+  height: 25vh;
+}
+form > div.row {
+  font-size: 1.3rem;
+  padding-left: 18vw;
+  color: #a810ef;
+}
+form > div.row > div {
+  display: flex;
+  align-items: baseline;
+}
+#prev-next-buttons {
+  padding-right: 16vw;
+}
+#prev-next-buttons button {
+  margin: 10px auto;
+}
+#scoreboard, #scoreboard-caps {
+  border: 2px solid #2df40e;
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+  width: 40vw;
+  z-index: 3;
+}
+label {
+  margin-left: 10px;
+}
+.result-image {
+  width: 20%;
+  height: auto;
+}
+@media only screen and (max-width: 768px) {
+    #collapsibleNavbar ul.navbar-nav {
+      align-items: flex-end;
+    }
+    ul.navbar-nav > li.nav-item {
+      margin-right: 15px;
+    }
+    #scoreboard, #scoreboard-caps {
+      border: 2px solid #2df40e;
+      padding-bottom: 1.2rem;
+      font-size: 1.2rem;
+      width: 50vw;
+    }
+    form > div.row {
+      font-size: 1rem;
+    }
+  }
